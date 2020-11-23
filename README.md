@@ -1,7 +1,7 @@
 # BINGO
 Least average tries to open a bingo line
 
-There's a <img src="https://latex.codecogs.com/gif.latex? n \times n " /> bingo board, one of the n columns, n rows and 2 diagonals contains prizes, what's the best strategy to open all boxes of that line? Assuming an equal chance of every <img src="https://latex.codecogs.com/gif.latex?2n+2" /> line being the bingo one it goes as follows.
+There's a <img src="https://latex.codecogs.com/gif.latex?n\timesn" /> bingo board, one of the n columns, n rows and 2 diagonals contains prizes, what's the best strategy to open all boxes of that line? Assuming an equal chance of every <img src="https://latex.codecogs.com/gif.latex?2n+2" /> line being the bingo one it goes as follows.
 
 <img src="https://latex.codecogs.com/gif.latex?Test Table 
 \begin{tabularx}{0.8\textwidth} { 
