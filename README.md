@@ -4,14 +4,13 @@
 \usepackage{hyperref}
 \usepackage[latin1]{inputenc}
 
-\title{Getting started}
-\author{Veloci Raptor}
-\date{03/14/15}
+\title{Least average tries to open a bingo line}
+\author{Elanif}
+\date{23/11/2020}
 
 \begin{document}
 \maketitle
 \document{begin}
-Least average tries to open a bingo line
 
 There's a $n\times n$ bingo board, one of the $n$ columns, $n$ rows and $2$ diagonals contains prizes, what's the best strategy to open all cells of that line? Assuming an equal chance of every $2n+2$ line being the bingo one it goes as follows.
 
