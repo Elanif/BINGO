@@ -1,0 +1,7 @@
+\documentclass{article}
+
+\title{Title of Document}
+\author{Name of Author}
+\begin{document}
+\maketitle
+\end{document}
