@@ -84,11 +84,12 @@ In reality $n=0$ would be an empty bingo board $\implies [X]=0$
 \[
   [X]= \left\{
 	\begin{array}{ll}
-		0 & \mbox{if } 0\leq n \leq 1
-		4/3 & \mbox{if } n=2
-		(n^2+5)/(2n+2) & \mbox{if } n\geq2
+		0 & \mbox{if } 0\leq n \leq 1 \\
+		4/3 & \mbox{if } n=2 \\
+		(n^2+5)/(2n+2) & \mbox{if } n\geq3 \\
 	\end{array}
 \right
 \]
+\newline
 
 \end{document}
