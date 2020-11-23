@@ -1,1 +1,1 @@
-[Latex](BINGO.pdf)
+[Latex](BINGO.png)
