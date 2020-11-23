@@ -15,4 +15,5 @@ If s_0 is empty you check s_1, you check a_1 spots, but this time you've already
 
 The expected value of a strategy can be derived by knowing the a_i: for example let n=5, s_i=i-th cell on a diagonal, (a_0,a_1,a_2,a_3,a_4}={3,2,3,2,2} returns an expected value of 5+1/12*((0+1+2)+(1+2)+(2+3+4)+(3+4)+(4+5)) = 7+7/12-
 
-In the general case [X]=n*(n-1)/2+\sum{i=0}^{n-1} (i*(a_i-1)+a_i*(a_i-1)/2) = n*(n-1)/2+\sum{i=0}^{n-1} (1/2(a_i-1)(a_i+2i))
+In the general case [X]=\sum{i=0}^{n-1} (a_i*i+a_i*(a_i-1)/2) which is uselessly? equal to \sum{i=0}^{n-1} (1/2*a_i*(a_i+2i-1))
+Alternatively [X]=n*(n-1)/2+\sum{i=0}^{n-1} (i*(a_i-1)+a_i*(a_i-1)/2) which is uselessly? equal to n*(n-1)/2+\sum{i=0}^{n-1} (1/2(a_i-1)(a_i+2i)) 
