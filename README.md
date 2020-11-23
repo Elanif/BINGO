@@ -11,7 +11,7 @@ The average number of opened cells will be n+[X] where X is the random value "nu
 The following indices go from 0 to n-1:
 If you check s_0 and it contains a prize, you check all its neighboors that could form a row/column/diagonal with it, if you hit a good one on the first try you've wasted 0 tried, if it's the second try 1 and so on. If a_0 is the number of rows+column+diagonals you're checking for, so far the average will be n+1/(2n+2)(0+1+...+(a_0-1)).
 
-Note that a_i\in{1,2,3,4}, with a_i=4 being only possible if s_i is in the dead center of the board, if n is odd, and a_i=3 only possible if s_i is on a diagonal. An already checked off line from s_j j<i won't count for a_i. \sum{i=0}^{n-1} a_i = 2n+2.
+Note that a_i\in{1,2,3,4}, with a_i=4 being only possible if s_i is in the dead center of the board, if n is odd, and a_i=3 only possible if s_i is on a diagonal. An already checked off line from s_j j<i won't count for a_i. \sum{i=0}^{n-1} a_i = 2n+2. All a_i's are equal to 2 except for two a_i=a_j=3 or one a_i=4, since there are only 2 diagonals.
 
 If s_0 is empty you check s_1, you check a_1 spots, but this time you've already wasted a check on a_0, so the contribution to the expected value is 1/(2n+2)(1+2+...+(a_1-1))
 
