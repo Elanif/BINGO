@@ -15,19 +15,23 @@
 
 There's a $n\times n$ bingo board, one of the $n$ columns, $n$ rows and $2$ diagonals contains prizes, what's the best strategy to open all cells of that line? Assuming an equal chance of every $2n+2$ line being the bingo one it goes as follows.
 \\
-A strategy works as follows: you check a spot $s_i$, if it has the prize you check its neighboors, if it's empty you proceed to $s_{i+1}$. $\{s_i\}_{i\in \{0,\dotsc,k\}}$
+A strategy works as follows: you check a spot $s_i$, if it has the prize you check its neighbors, if it's empty you proceed to $s_{i+1}$. $\{s_i\}_{i\in \{0,\dotsc,k\}}$
 
 The average number of opened cells will be $n+[X]$ where $X$ is the random value "number of empty cells opened".
 \\
-If you check $s_0$ and it contains a prize, you check all its neighboors that could form a row/column/diagonal with it, if you hit a good one on the first try you've wasted $0$ tries, if it's the second try $1$ and so on. If $a_0$ is the number of rows+column+diagonals you're checking for, so far the average will be $n+1/(2n+2)(0+1+...+(a_0-1))$.
+If you check $s_0$ and it contains a prize, you check all its neighbors that could form a row/column/diagonal with it, if you hit a good one on the first try you've wasted $0$ tries, if it's the second try $1$ and so on. If $a_0$ is the number of rows+column+diagonals you're checking for, so far the average will be $n+1/(2n+2)(0+1+...+(a_0-1))$.
 \\
 
 Properties of $\{a_i\}_{i\in \{0,\dotsc,k\}}$
 \begin{enumerate}
-\item $a_i\in\{1,2,3,4\}$, $a_i=4$ being only possible if $s_i$ is in the dead center of the board and if $n$ is odd, and $a_i=3$ only possible if $s_i$ is on a diagonal.
-\item All the elements except $1$ or $2$ of $\{a_i\}_{i\in \{0,\dotsc,k\}}$ are $\leq 2$
-\newline $a_i=4 \iff s_i$ is on the dead center of the board
-\newline $a_j = 3 \iff s_j$ is on a diagonal but not the center
+\item $a_i\in\{1,2,3,4\}$.
+\newline$a_i=1$ and $a_i=0$ are ideally the same: 
+\newline $a_i=0$ means checking if it's the right row/column/diagonal without checking wich one of these options it is. It should only happen when checking the last option by elimination (which will be the strategy for $n=3$). 
+\newline $a_i=1$ means checking a cell, then only one of its neighbors to confirm if it's a bingo. If the last option is being checked then it means $a_i$ is actually 0. If there are more lines to check then it's always better to check the intersection $s_i$ of these two lines.
+\newline These last 2 options will be grouped into $a_i=1$, because the formulas work better this way.
+\item[1b)] $a_i=4$ is only possible if $n$ is odd and $s_i$ is in the dead center of the board.
+\item[1c)] $a_i=3$ is only possible if $s_i$ is on a diagonal but not on the center, if it exists.
+\item At most 2 elements of $\{a_i\}_{i\in \{0,\dotsc,k\}}$ are $\geq 3$, since there are 2 diagonals.
 \item $\displaystyle\sum_{i=0}^{k} a_i = 2n+2$
 \end{enumerate}
 
@@ -78,7 +82,7 @@ In conclusion
 
 In reality $n=0$ would be an empty bingo board $\implies [X]=0$
 \newline $n=1$ doesn't have $4$ lines, but only 1, so then again $[X]=0$
-\newline For $n=2$ all the cells are symmetric, hence it makes sense that every sequence is the same.
+\newline For $n=2$ $(3,3)$ isn't possible, and the only strategy is $(3,2,1)$ and all the cells are symmetric.
 \newline
 
 \[
@@ -91,5 +95,6 @@ In reality $n=0$ would be an empty bingo board $\implies [X]=0$
 \right
 \]
 \newline
+(1) is always possible when $n\geq3 \land n \text{ is odd}$: $s_0$ is the center and the subsequent $s_i$'s are all on the same diagonal.
 
 \end{document}
