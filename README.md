@@ -37,7 +37,9 @@ In the general case $[X]=1/(2n+2)\sum_{i=0}^{n-1} (a_ii+a_i(a_i-1)/2)$ which is 
 Alternatively $[X]=n*(n-1)/2+1/(2n+2)\sum_{i=0}^{n-1} (i*(a_i-1)+a_i*(a_i-1)/2)$ which is uselessly? equal to $n*(n-1)/2+1/(2n+2)\sum_{i=0}^{n-1} (1/2(a_i-1)(a_i+2i))$
 
 Let 
-\[ f(\{a_i\},k)=1/(2n+2)\sum_{i=0}^{n-1} (a_ii+a_i(a_i-1)/2) \]
+\[ f(\{a_i\},k)=1/(2n+2)\sum_{i=0}^{k} (a_ii+a_i(a_i-1)/2) \]
+And
+\[ (a_0,\dotsc,a_k) \sim (b_0,\dotsc,b_h) \iff f(\{a_i\},k)=f(\{b_j\},h)\]
 
 To find the best strategy it means to find such $s_i$ so that $f$ is minimum.
 \newline \newline
@@ -46,13 +48,23 @@ Properties of an optimal$\{a_i\}_{i\in \{1,\dotsc,k\}}$
 \item $\{a_i\}_{i\in \{1,\dotsc,k\}}$ is descending: if $\exists i,j\in\{1,\dotsc,k\}:i<j \land a_i<a_j$. By switching $a_i$ with $a_j$ the expected value diminishes
 \item At most two items in $\{a_i\}_{i\in \{1,\dotsc,k\}}$ are equal to $1$
 \newline if more than $2$ existed the sequence would be of the form $(\dotsc,\underbrace{1,\dotsc,1}_\text{at least 3 times})$ and by collapsing the first 2 1's together we get a lower expected value
+\newline
+Note that $(a_0,\dotsc,a_{k-2},1,1)\sim(a_0,\dotsc,a_{k-2},2)$
 
 \item $\forall n\in\mathbb{N} (n\geq2 \implies \exists i\in\{1,\dotsc,k\}: a_i\geq3)$
-\newline By absurd $\forall i\in\{1,\dotsc,k\}: a_i\leq2$, then the sequence is either $\textbf{a}$ $(\underbrace{2,\dotsc,2}_\text{n+1 times})$ or $(\underbrace{2,\dotsc,2}_\text{n times},1,1)$
+\newline By absurd $\forall i\in\{1,\dotsc,k\}: a_i\leq2$, then the sequence is either $A=(\underbrace{2,\dotsc,2}_\text{n+1 times})$ or $B=(\underbrace{2,\dotsc,2}_\text{n times},1,1)$.
+\newline But $A \sim B$ and in both cases $(3,\underbrace{2,\dotsc,2}_\text{n-1 times},1)$ is better by $n+1-2=n-1\geq1$.
 \end{enumerate}
+\newline
+This proves that the best sequences are one of the following:
+\newline
+\begin{itemize}
+\newline
+\item $(4,\underbrace{2,\dotsc,2}_\text{n-1 times})\sim(4,\underbrace{2,\dotsc,2}_\text{n-2 times},1,1)
 
-This proves that the best sequences are $(4,\underbrace{2,\dotsc,2}_\text{n-1 times})$ or  $(3,3,\underbrace{2,\dotsc,2}_\text{n-2 times})$, in both cases $[X]=$
-
+\item (3,3,\underbrace{2,\dotsc,2}_\text{n-2 times})
+\end{itemize}
+\newline In both cases $[X]=$
 \end{document}
 
 
@@ -62,3 +74,4 @@ This proves that the best sequences are $(4,\underbrace{2,\dotsc,2}_\text{n-1 ti
 \newline If (a) holds the sequence is of the form $(3,2,\dotsc,2,1)$, and by collapsing the $1$ onto the first $2$ we obtain $(3,3,2,\dotsc,2)$ which is more optimal.
 \newline if (b) holds the sequence is of the form $(4,2,\dotsc,1,1)$ or $(3,3,\dotsc,1,1)$, but by collapsing the 2 1's together the expected value doesn't change
 \underbrace{\dotsc}_\text{0 to 1 times
+ $\textbf{a)}$
