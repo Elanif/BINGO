@@ -1,3 +1,4 @@
+\document{begin}
 Least average tries to open a bingo line
 
 There's a n\times n bingo board, one of the n columns, n rows and 2 diagonals contains prizes, what's the best strategy to open all cells of that line? Assuming an equal chance of every 2n+2 line being the bingo one it goes as follows.
@@ -19,3 +20,4 @@ In the general case [X]=1/(2n+2)\sum{i=0}^{n-1} (a_ii+a_i(a_i-1)/2) which is use
 Alternatively [X]=n*(n-1)/2+1/(2n+2)\sum{i=0}^{n-1} (i*(a_i-1)+a_i*(a_i-1)/2) which is uselessly? equal to n*(n-1)/2+1/(2n+2)\sum{i=0}^{n-1} (1/2(a_i-1)(a_i+2i))
 
 To find the best strategy it means to find such s_i so that [X] is minimum.
+\document{end}
