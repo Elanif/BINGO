@@ -40,12 +40,11 @@ The expected value of a strategy can be calculated with $\{a_i\}_{i\in \{0,\dots
 In the general case $[X]=1/(2n+2)\sum_{i=0}^{n-1} (a_ii+a_i(a_i-1)/2)$ which is uselessly? equal to $1/(2n+2)\sum_{i=0}^{n-1} (1/2a_i(a_i+2i-1))$.
 
 Alternatively $[X]=n*(n-1)/2+1/(2n+2)\sum_{i=0}^{n-1} (i*(a_i-1)+a_i*(a_i-1)/2)$ which is uselessly? equal to $n*(n-1)/2+1/(2n+2)\sum_{i=0}^{n-1} (1/2(a_i-1)(a_i+2i))$.
-
+\newline \newline
 Let 
 \[ f(\{a_i\},k)=\sum_{i=0}^{k} (a_ii+a_i(a_i-1)/2) \]
 And
 \[ (a_0,\dotsc,a_k) \sim (b_0,\dotsc,b_h) \iff f(\{a_i\},k)=f(\{b_j\},h)\]
-
 To find the best strategy it means to find such $s_i$ so that $f$ is minimum.
 \newline \newline
 Properties of an optimal$\{a_i\}_{i\in \{0,\dotsc,k\}}$:
@@ -60,7 +59,6 @@ Note that $(a_0,\dotsc,a_{k-2},1,1)\sim(a_0,\dotsc,a_{k-2},2)$.
 \newline By absurd $\forall i\in\{0,\dotsc,k\}: a_i\leq2$, then the sequence is either $A=(\underbrace{2,\dotsc,2}_\text{n+1 times})$ or $B=(\underbrace{2,\dotsc,2}_\text{n times},1,1)$.
 \newline But $A \sim B$ and in both cases $(3,\underbrace{2,\dotsc,2}_\text{n-1 times},1)$ is better by $n+1-2=n-1\geq1$.
 \end{enumerate}
-\newline
 This proves that if $n\geq2$ the best sequences are one of the following:
 \begin{itemize}
 \item \begin{equation} (4,\underbrace{2,\dotsc,2}_\text{n-1 times})\sim(4,\underbrace{2,\dotsc,2}_\text{n-2 times},1,1)
