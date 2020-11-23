@@ -96,5 +96,5 @@ In reality $n=0$ would be an empty bingo board $\implies [X]=0$
 \]
 \newline
 (1) is always possible when $n\geq3 \land n \text{ is odd}$: $s_0$ is the center and the subsequent $s_i$'s are all on the same diagonal.
-
+\new (2) is always possible by choosing $s_0$ as a corner, $s_1$ as the center, and all the other $s_i$'s on the diagonal that connects $s_0$ with $s_1$
 \end{document}
