@@ -48,7 +48,7 @@ Properties of an optimal$\{a_i\}_{i\in \{1,\dotsc,k\}}$
 \newline if more than $2$ existed the sequence would be of the form $(\dotsc,\underbrace{1,\dotsc,1}_\text{at least 3 times})$ and by collapsing the first 2 1's together we get a lower expected value
 
 \item $\forall n\in\mathbb{N} (n\geq2 \implies \exists i\in\{1,\dotsc,k\}: a_i\geq3)$
-\newline By absurd $\forall i\in\{1,\dotsc,k\}: a_i\leq2$, then the sequence is either $(\underbrace{2,\dotsc,2}_\text{n+1 times})$ or $(\underbrace{2,\dotsc,2}_\text{n times},1,1)$
+\newline By absurd $\forall i\in\{1,\dotsc,k\}: a_i\leq2$, then the sequence is either $\textbf{a}$ $(\underbrace{2,\dotsc,2}_\text{n+1 times})$ or $(\underbrace{2,\dotsc,2}_\text{n times},1,1)$
 \end{enumerate}
 
 This proves that the best sequences are $(4,\underbrace{2,\dotsc,2}_\text{n-1 times})$ or  $(3,3,\underbrace{2,\dotsc,2}_\text{n-2 times})$, in both cases $[X]=$
