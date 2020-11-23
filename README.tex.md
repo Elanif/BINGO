@@ -28,7 +28,7 @@ Properties of $\{a_i\}_{i\in \{0,\dotsc,k\}}$
 \newline$a_i=1$ and $a_i=0$ are ideally the same: 
 \newline $a_i=0$ means checking if it's the right row/column/diagonal without checking wich one of these options it is. It should only happen when checking the last option by elimination (which will be the strategy for $n=3$). 
 \newline $a_i=1$ means checking a cell, then only one of its neighbors to confirm if it's a bingo. If the last option is being checked then it means $a_i$ is actually 0. If there are more lines to check then it's always better to check the intersection $s_i$ of these two lines.
-\newline These last 2 options will be grouped into $a_i=1$, because the formulas work better this way.
+\newline These 2 options will be grouped into $a_i=1$, because the formulas work better this way.
 \item[1b)] $a_i=4$ is only possible if $n$ is odd and $s_i$ is in the dead center of the board.
 \item[1c)] $a_i=3$ is only possible if $s_i$ is on a diagonal but not on the center, if it exists.
 \item At most 2 elements of $\{a_i\}_{i\in \{0,\dotsc,k\}}$ are $\geq 3$, since there are 2 diagonals.
