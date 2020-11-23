@@ -73,7 +73,7 @@ In conclusion
 \item If $n=1$ the best sequences are $(3,1)\sim(2,2)\sim(2,1,1)$, $[X]=4/4=1$
 \item $\forall n\in\mathbb{N}(n+2\leq5 \iff n\leq2)\implies$ for $n=2$ the best sequence is $(3,2,1$, $[X]=8/6=4/3$
 \item If $n=3$ $n^2+5=n^2+n+2$ so all 5 of (1) (2) and (3) are the best, $[X]=14/8=7/4$
-\item If $n\geq4$ (1) and (2) are the best sequences, $[X]=(n^2+5)/(2n+2)$
+\item If $n\geq4$ and $n$ is odd (1) and (2) are the best sequences, If $n$ is even only (2) are. $[X]=(n^2+5)/(2n+2)$
 \end{itemize}
 
 In reality $n=0$ would be an empty bingo board $\implies [X]=0$
