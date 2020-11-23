@@ -32,14 +32,14 @@ Properties of $\{a_i\}_{i\in \{0,\dotsc,k\}}$
 \item[1b)] $a_i=4$ is only possible if $n$ is odd and $s_i$ is in the dead center of the board.
 \item[1c)] $a_i=3$ is only possible if $s_i$ is on a diagonal but not on the center, if it exists.
 \item At most 2 elements of $\{a_i\}_{i\in \{0,\dotsc,k\}}$ are $\geq 3$, since there are 2 diagonals.
-\item $\displaystyle\sum_{i=0}^{k} a_i = 2n+2$
+\item $\displaystyle\sum_{i=0}^{k} a_i = 2n+2$.
 \end{enumerate}
 
 The expected value of a strategy can be calculated with $\{a_i\}_{i\in \{0,\dotsc,k\}}$: for example let $n=5$, $s_i=i-th$ cell on a diagonal, $(a_0,a_1,a_2,a_3,a_4)=(3,2,3,2,2)$ returns an expected value of $5+1/12((0+1+2)+(1+2)+(2+3+4)+(3+4)+(4+5)) = 7+7/12$.
 \newline\newline
-In the general case $[X]=1/(2n+2)\sum_{i=0}^{n-1} (a_ii+a_i(a_i-1)/2)$ which is uselessly? equal to $1/(2n+2)\sum_{i=0}^{n-1} (1/2a_i(a_i+2i-1))$
+In the general case $[X]=1/(2n+2)\sum_{i=0}^{n-1} (a_ii+a_i(a_i-1)/2)$ which is uselessly? equal to $1/(2n+2)\sum_{i=0}^{n-1} (1/2a_i(a_i+2i-1))$.
 
-Alternatively $[X]=n*(n-1)/2+1/(2n+2)\sum_{i=0}^{n-1} (i*(a_i-1)+a_i*(a_i-1)/2)$ which is uselessly? equal to $n*(n-1)/2+1/(2n+2)\sum_{i=0}^{n-1} (1/2(a_i-1)(a_i+2i))$
+Alternatively $[X]=n*(n-1)/2+1/(2n+2)\sum_{i=0}^{n-1} (i*(a_i-1)+a_i*(a_i-1)/2)$ which is uselessly? equal to $n*(n-1)/2+1/(2n+2)\sum_{i=0}^{n-1} (1/2(a_i-1)(a_i+2i))$.
 
 Let 
 \[ f(\{a_i\},k)=\sum_{i=0}^{k} (a_ii+a_i(a_i-1)/2) \]
@@ -48,15 +48,15 @@ And
 
 To find the best strategy it means to find such $s_i$ so that $f$ is minimum.
 \newline \newline
-Properties of an optimal$\{a_i\}_{i\in \{0,\dotsc,k\}}$
+Properties of an optimal$\{a_i\}_{i\in \{0,\dotsc,k\}}$:
 \begin{enumerate}
-\item $\{a_i\}_{i\in \{0,\dotsc,k\}}$ is descending: if $\exists i,j\in\{0,\dotsc,k\}:i<j \land a_i<a_j$. By switching $a_i$ with $a_j$ the expected value diminishes
-\item At most two items in $\{a_i\}_{i\in \{0,\dotsc,k\}}$ are equal to $1$
-\newline if more than $2$ existed the sequence would be of the form $(\dotsc,\underbrace{1,\dotsc,1}_\text{at least 3 times})$ and by collapsing the first 2 1's together we get a lower expected value
+\item $\{a_i\}_{i\in \{0,\dotsc,k\}}$ is descending: if $\exists i,j\in\{0,\dotsc,k\}:i<j \land a_i<a_j$. By switching $a_i$ with $a_j$ the expected value diminishes.
+\item At most two items in $\{a_i\}_{i\in \{0,\dotsc,k\}}$ are equal to $1$.
+\newline if more than $2$ existed the sequence would be of the form $(\dotsc,\underbrace{1,\dotsc,1}_\text{at least 3 times})$ and by collapsing the first 2 1's together we get a lower expected value.
 \newline
-Note that $(a_0,\dotsc,a_{k-2},1,1)\sim(a_0,\dotsc,a_{k-2},2)$
+Note that $(a_0,\dotsc,a_{k-2},1,1)\sim(a_0,\dotsc,a_{k-2},2)$.
 
-\item $\forall n\in\mathbb{N} (n\geq2 \implies \exists i\in\{0,\dotsc,k\}: a_i\geq3)$
+\item $\forall n\in\mathbb{N} (n\geq2 \implies \exists i\in\{0,\dotsc,k\}: a_i\geq3)$.
 \newline By absurd $\forall i\in\{0,\dotsc,k\}: a_i\leq2$, then the sequence is either $A=(\underbrace{2,\dotsc,2}_\text{n+1 times})$ or $B=(\underbrace{2,\dotsc,2}_\text{n times},1,1)$.
 \newline But $A \sim B$ and in both cases $(3,\underbrace{2,\dotsc,2}_\text{n-1 times},1)$ is better by $n+1-2=n-1\geq1$.
 \end{enumerate}
@@ -65,23 +65,23 @@ This proves that if $n\geq2$ the best sequences are one of the following:
 \begin{itemize}
 \item \begin{equation} (4,\underbrace{2,\dotsc,2}_\text{n-1 times})\sim(4,\underbrace{2,\dotsc,2}_\text{n-2 times},1,1)
 \end{equation}
-$[X]=(n^2+5)/(2n+2)$
-\item \begin{equation}(3,3,\underbrace{2,\dotsc,2}_\text{n-2 times})\sim(3,3,\underbrace{2,\dotsc,2}_\text{n-3 times},1,1)\end{equation} $[X]=(n^2+5)/(2n+2)$
-\item \begin{equation}(3,\underbrace{2,\dotsc,2}_\text{n-1 times},1)\end{equation} $[X]=(n^2+n+2)/(2n+2)$
+$[X]=(n^2+5)/(2n+2)$.
+\item \begin{equation}(3,3,\underbrace{2,\dotsc,2}_\text{n-2 times})\sim(3,3,\underbrace{2,\dotsc,2}_\text{n-3 times},1,1)\end{equation} $[X]=(n^2+5)/(2n+2)$.
+\item \begin{equation}(3,\underbrace{2,\dotsc,2}_\text{n-1 times},1)\end{equation} $[X]=(n^2+n+2)/(2n+2)$.
 \end{itemize}
 
 In conclusion
 
 \begin {itemize}
-\item If $n=0$ the best sequence are $(2)\sim(1,1)$, $[X]=1/2$
-\item If $n=1$ the best sequences are $(3,1)\sim(2,2)\sim(2,1,1)$, $[X]=4/4=1$
-\item $\forall n\in\mathbb{N}(n+2\leq5 \iff n\leq2)\implies$ for $n=2$ the best sequence is $(3,2,1$, $[X]=8/6=4/3$
-\item If $n=3$ $n^2+5=n^2+n+2$ so all 5 of (1) (2) and (3) are the best, $[X]=14/8=7/4$
-\item If $n\geq4$ and $n$ is odd (1) and (2) are the best sequences, If $n$ is even only (2) are. $[X]=(n^2+5)/(2n+2)$
+\item If $n=0$ the best sequence are $(2)\sim(1,1)$, $[X]=1/2$.
+\item If $n=1$ the best sequences are $(3,1)\sim(2,2)\sim(2,1,1)$, $[X]=4/4=1$.
+\item $\forall n\in\mathbb{N}(n+2\leq5 \iff n\leq2)\implies$ for $n=2$ the best sequence is $(3,2,1)$, $[X]=8/6=4/3$.
+\item If $n=3$ $n^2+5=n^2+n+2$ so all 5 of (1) (2) and (3) are the best, $[X]=14/8=7/4$.
+\item If $n\geq4$ and $n$ is odd (1) and (2) are the best sequences, If $n$ is even only (2) are. $[X]=(n^2+5)/(2n+2)$.
 \end{itemize}
 
-In reality $n=0$ would be an empty bingo board $\implies [X]=0$
-\newline $n=1$ doesn't have $4$ lines, but only 1, so then again $[X]=0$
+In reality $n=0$ would be an empty bingo board $\implies [X]=0$.
+\newline $n=1$ doesn't have $4$ lines, but only 1, so then again $[X]=0$.
 \newline For $n=2$ $(3,3)$ isn't possible, and the only strategy is $(3,2,1)$ and all the cells are symmetric.
 \newline
 
@@ -96,5 +96,5 @@ In reality $n=0$ would be an empty bingo board $\implies [X]=0$
 \]
 \newline
 (1) is always possible when $n\geq3 \land n \text{ is odd}$: $s_0$ is the center and the subsequent $s_i$'s are all on the same diagonal.
-\new (2) is always possible by choosing $s_0$ as a corner, $s_1$ as the center, and all the other $s_i$'s on the diagonal that connects $s_0$ with $s_1$
+\newline (2) is always possible by choosing $s_0$ as a corner, $s_1$ as the center, and all the other $s_i$'s on the diagonal that connects $s_0$ with $s_1$.
 \end{document}
