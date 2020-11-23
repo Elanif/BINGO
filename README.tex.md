@@ -13,7 +13,7 @@
 \begin{document}
 \maketitle
 
-There's a $n\times n$ bingo board, one of the $n$ columns, $n$ rows and $2$ diagonals contains prizes, what's the best strategy to open all cells of that line? Assuming an equal chance of every $2n+2$ line being the bingo one it goes as follows.
+There's a $n\times n$ bingo board, one of the $n$ columns, $n$ rows and $2$ diagonals contains prizes, what's the best strategy to open all cells of that line? Assuming an equal chance of all $2n+2$ line being the bingo one it goes as follows.
 \\
 A strategy works as follows: you check a spot $s_i$, if it has the prize you check its neighbors, if it's empty you proceed to $s_{i+1}$. $\{s_i\}_{i\in \{0,\dotsc,k\}}$
 
@@ -83,8 +83,6 @@ In conclusion
 In reality $n=0$ would be an empty bingo board $\implies [X]=0$.
 \newline $n=1$ doesn't have $4$ lines, but only 1, so then again $[X]=0$.
 \newline For $n=2$ $(3,3)$ isn't possible, and the only strategy is $(3,2,1)$ and all the cells are symmetric.
-\newline
-
 \[
   [X]= \left\{
 	\begin{array}{ll}
@@ -92,9 +90,8 @@ In reality $n=0$ would be an empty bingo board $\implies [X]=0$.
 		4/3 & \mbox{if } n=2 \\
 		(n^2+5)/(2n+2) & \mbox{if } n\geq3 \\
 	\end{array}
-\right
+\right.
 \]
-\newline
-(1) is always possible when $n\geq3 \land n \text{ is odd}$: $s_0$ is the center and the subsequent $s_i$'s are all on the same diagonal.
-\newline (2) is always possible by choosing $s_0$ as a corner, $s_1$ as the center, and all the other $s_i$'s on the diagonal that connects $s_0$ with $s_1$.
+(1) is always possible when $n\geq3$ and $n$ is odd: $s_0$ is the center and the subsequent $s_i$'s are all on the same diagonal.
+\newline (2) is always possible when $n\geq3$ by choosing $s_0$ as a corner, $s_1$ as the center, and all the other $s_i$'s on the diagonal that connects $s_0$ with $s_1$.
 \end{document}
